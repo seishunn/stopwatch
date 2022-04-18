@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+*,*:before,*:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    background: #2C2C2C;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/* Обнуление */
+
+#root, .App {
+    height: 100%;
+}
+.App {
+    display: flex;
+    justify-content: center;
+    color: #B3B3B3;
+    user-select: none;
+}
+.main {
+    width: 700px;
+    height: 100%;
+    padding: 10px 0;
+}
+.timer_controls {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+.timer_controls a {
+    color: #B3B3B3;
+    padding: 5px 10px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+}
+.timer div {
+    font-size: 90px;
+}
+.timer_laps .lap{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px;
+    margin: 5px 0;
+    animation: dropLap 1s forwards;
+}
+.lap button {
+    border: 1px solid #B3B3B3;
+    background: unset;
+    color: #B3B3B3;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+@keyframes dropLap {
+    0% {
+        top: -30px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
